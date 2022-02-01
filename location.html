@@ -15,9 +15,11 @@
     <meta property="og:locale" content="en_US">
     <title>Location</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" href="/favicon.ico">
-    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d115ed45860decf5d0e4a0c1ea8e3d12"></script> -->
-    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d115ed45860decf5d0e4a0c1ea8e3d12"></script>
+    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/location.js"></script>
 </head>
 
 <body>
@@ -134,6 +136,16 @@
                 </li>
             </ul>
             <div class="map-wrap">
+                <div class="custom_typecontrol radius_border">
+                    <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')"
+                        >
+                        Map
+                    </span>
+                    <span id="btnSkyview" class="btn" onclick="setMapType('skyview')"
+                        >
+                        Sky View
+                    </span>
+                </div>
                 <div id="map"></div>
                 <ul class="traffic">
                     <li>
@@ -149,22 +161,50 @@
                         </a>
                     </li>
                 </ul>
-                <div class="text-map">
-                    <a href="#" class="close"><i class="fas fa-times"></i></a>
-                    <div>
-                        <img src="./img/gallery1.jpg" alt="">
-                        <h2>Head Office</h2>
-                        <p><strong>Address</strong><br> Parramatta Rd New York, W1F 9LD</p>
-                        <p><strong>Phone</strong><br> +44 203 206 1170</p>
-                        <p><strong>Email</strong><br> office@closets.com</p>
+                <div class="map-overlay">
+                    <div class="text-map on">
+                        <a href="#" class="close"><i class="fas fa-times"></i></a>
+                        <div>
+                            <img src="./img/map1.jpg" alt="">
+                            <h2>Head Office</h2>
+                            <p><strong>Address</strong><br> Parramatta Rd New York, W1F 9LD</p>
+                            <p><strong>Phone</strong><br> +44 203 206 1170</p>
+                            <p><strong>Email</strong><br> office@closets.com</p>
+                        </div>
+                    </div>
+                    <div class="text-map">
+                        <a href="#" class="close"><i class="fas fa-times"></i></a>
+                        <div>
+                            <img src="./img/map2.jpg" alt="">
+                            <h2>Head Office</h2>
+                            <p><strong>Address</strong><br> Parramatta Rd New York, W1F 9LD</p>
+                            <p><strong>Phone</strong><br> +44 203 206 1170</p>
+                            <p><strong>Email</strong><br> office@closets.com</p>
+                        </div>
+                    </div>
+                    <div class="text-map">
+                        <a href="#" class="close"><i class="fas fa-times"></i></a>
+                        <div>
+                            <img src="./img/map3.jpg" alt="">
+                            <h2>Head Office</h2>
+                            <p><strong>Address</strong><br> Parramatta Rd New York, W1F 9LD</p>
+                            <p><strong>Phone</strong><br> +44 203 206 1170</p>
+                            <p><strong>Email</strong><br> office@closets.com</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="box-location">
                 <p>I love to connect with you</p>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <img src="img/img_location1.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/img_location2.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/img_location3.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
