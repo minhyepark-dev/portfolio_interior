@@ -15,8 +15,10 @@
     <meta property="og:locale" content="en_US">
     <title>Join</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" href="/favicon.ico">
-    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/join.js"></script>
 </head>
 
 <body>
@@ -112,7 +114,7 @@
                 <h2>Join</h2>
             </div>
             <h3>Let's get you set up</h3>
-            <form action="/" method="POST">
+            <form action="join_result.html" method="get" id="member">
                 <fieldset>
                     <legend class="hidden">회원가입양식폼</legend>
                     <h3><label for="terms">Terms & Policy</label></h3>
@@ -127,18 +129,18 @@
                         <caption class="hidden">회원정보 입력양식 테이블</caption>
                         <tr>
                             <th scope="row">
-                                <label for="id">USER ID</label>
+                                <label for="userid">USER ID</label>
                             </th>
                             <td>
-                                <input type="text" name="id" id="id" placeholder="Enter your ID" required>
+                                <input type="text" name="userid" id="userid" placeholder="Enter your ID">
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">
-                                <label for="pwd">PASSWORD</label>
+                                <label for="pwd1">PASSWORD</label>
                             </th>
                             <td>
-                                <input type="password" name="pwd" id="pwd" placeholder="Enter your password" required>
+                                <input type="password" name="pwd1" id="pwd1" placeholder="Enter your password">
                             </td>
                         </tr>
                         <tr>
@@ -146,7 +148,7 @@
                                 <label for="pwd2">RE PASSWORD</label>
                             </th>
                             <td>
-                                <input type="password" name="pwd2" id="pwd2" placeholder="Enter your password again" required>
+                                <input type="password" name="pwd2" id="pwd2" placeholder="Enter your password again">
                             </td>
                         </tr>
                         <tr>
@@ -174,13 +176,7 @@
                                 <label for="email">E-MAIL</label>
                             </th>
                             <td>
-                                <input type="text" name="email" id="email" placeholder="Enter your email address">
-                                <select name="company" id="company">
-                                    <option value="naver">@gmail.com</option>
-                                    <option value="naver">@naver.com</option>
-                                    <option value="nate">@nate.com</option>
-                                    <option value="daum">@daum.net</option>
-                                </select>
+                                <input type="email" name="email" id="email" placeholder="Enter your email address">
                             </td>
                         </tr>
                         <tr>
