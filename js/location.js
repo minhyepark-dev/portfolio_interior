@@ -19,7 +19,7 @@ var markerOptions = [
     {
         title: "Head Office",
         latlng: new kakao.maps.LatLng(37.551301397986144, 126.98855314889764),
-        imgSrc: "../img/icon-map.png",
+        imgSrc: "img/icon-map.png",
         imgSize: new kakao.maps.Size(50, 50),
         imgPos: { offset: new kakao.maps.Point(50, 60) },
         button: branch_btns[0],
@@ -28,7 +28,7 @@ var markerOptions = [
     {
         title: "First Branch",
         latlng: new kakao.maps.LatLng(35.15317690680852, 129.11898444686017),
-        imgSrc: "../img/icon-map.png",
+        imgSrc: "img/icon-map.png",
         imgSize: new kakao.maps.Size(50, 50),
         imgPos: { offset: new kakao.maps.Point(25, 50) },
         button: branch_btns[1],
@@ -37,7 +37,7 @@ var markerOptions = [
     {
         title: "Second Branch",
         latlng: new kakao.maps.LatLng(37.286978547618006, 127.01215097235253),
-        imgSrc: "../img/icon-map.png",
+        imgSrc: "img/icon-map.png",
         imgSize: new kakao.maps.Size(50, 50),
         imgPos: { offset: new kakao.maps.Point(50, 60) },
         button: branch_btns[2],
