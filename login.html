@@ -15,8 +15,10 @@
     <meta property="og:locale" content="en_US">
     <title>Login</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" href="/favicon.ico">
-    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/login.js"></script>
 </head>
 
 <body>
@@ -112,30 +114,34 @@
                 <h2>Login</h2>
             </div>
             <h3>Welcome to the Closets</h3>
-            <form action="/" method="POST">
+            <form action="/" method="get" id="login">
                 <fieldset>
                     <legend class="hidden">로그인양식폼</legend>
                     <div class="input-wrap">
                         <i class="fas fa-user"></i>
                         <label for="id">USER ID</label>
-                        <input type="text" name="id" id="id" placeholder="User ID" required>
+                        <input type="text" name="id" id="id" placeholder="User ID">
                     </div>
                     <div class="input-wrap">
                         <i class="fas fa-lock"></i>
                         <label for="pwd">PASSWORD</label>
-                        <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+                        <input type="password" name="pwd" id="pwd" placeholder="Password">
                     </div>
                     <div class="text-login">
-                        <label for="remember-id">
-                            <input type="checkbox" name="hobby" id="remember-id">
-                            Remember</label>
-                            <a href="#">Forgot password?</a>
+                        <input type="checkbox" name="check" id="remember-id">
+                        <label for="remember-id">Remember</label>
+                        <a href="#">Forgot password?</a>
                     </div>
-                      <input type="submit" value="LOGIN">
+                    <input type="submit" value="LOGIN">
                 </fieldset>
             </form>
         </div>
     </section>
+    <aside id="go-top">
+        <a href="#">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </aside>
     <footer id="footer">
         <div class="inner">
             <h1>Closets</h1>
