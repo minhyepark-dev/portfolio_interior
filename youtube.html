@@ -15,8 +15,10 @@
     <meta property="og:locale" content="en_US">
     <title>Youtube</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" href="/favicon.ico">
-    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8f56c41d5f.js" crossorigin="anonymous"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/youtube.js"></script>
 </head>
 
 <body>
@@ -118,31 +120,20 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam, asperiores, corporis sunt dignissimos sequi ipsum accusantium recusandae velit consequatur deserunt! Provident accusamus iusto velit eligendi in eveniet!</p>
                 </div>
                 <div class="video-wrap">
-                    <div class="btn-play"><a href="#"><i class="fas fa-play"></i></a></div>
-                    <video src="./vid/video_main.mp4"></video>
+                    <div class="btn-play">
+                        <a href="#">
+                            <i class="fas fa-pause"></i>
+                        </a>
+                    </div>
+                    <video src="./vid/video_main.mp4" autoplay muted loop></video>
                 </div>
             </div>
             <div class="list-video">
                 <h2>Video List</h2>
-                <article>
-                    <div class="box-video">
-                        <video src="./vid/vid2.mp4"></video>
-                    </div>
-                    <div class="text-video">
-                        <h2>Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nihil impedit sunt dolorem corporis nulla?</p>
-                        <span>2021.12.15</span>
-                        <a href="#" class="btn">view video</a>
-                    </div>
-                </article>
+                <div class="vidList"></div>
             </div>
         </div>
     </section>
-    <figure class="pop">
-        <iframe src="./vid/video_main.mp4" frameborder="0" width="100%" height="100%"
-            allowfullscreen></iframe>
-        <span class="close">close</span>
-    </figure>
     <aside id="go-top">
         <a href="#">
             <i class="fas fa-arrow-up"></i>
