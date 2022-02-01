@@ -15,9 +15,11 @@
     <meta property="og:locale" content="en_US">
     <title>Gallery</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/6e561f56c7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/common.js"></script>
+    <script defer src="js/gallery.js"></script>
 </head>
 
 <body>
@@ -131,64 +133,20 @@
                         </div>
                     </div>
                     <p class="text-result-empty">There is no result.</p>
-                    <ul id="list">
-                        <li class="list-title">
-                            <h2>Photography</h2>
-                            <p class="on">Home</p>
-                            <p>Living Room</p>
-                            <p>Bed Room</p>
-                            <p>Kitchen</p>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <a href="#">
-                                    <img src="./img/gal1.jpg">
-                                </a>
-                                <p class="img-title">image's title comes here</p>
-                                <span>
-                                    <img src="https://www.flickr.com/images/buddyicon.gif" >
-                                    <strong>owner's name here</strong>
-                                </span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nemo.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <a href="#">
-                                    <img src="./img/gal2.jpg" >
-                                </a>
-                                <p class="img-title">image's title comes here</p>
-                                <span>
-                                    <img src="https://www.flickr.com/images/buddyicon.gif" >
-                                    <strong>owner's name here</strong>
-                                </span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nemo.</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div>
-                                <a href="#">
-                                    <img src="./img/gal3.jpg" >
-                                </a>
-                                <p class="img-title">image's title comes here</p>
-                                <span>
-                                    <img src="https://www.flickr.com/images/buddyicon.gif" >
-                                    <strong>owner's name here</strong>
-                                </span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nemo.</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="list-title">
+                        <h2>Photography</h2>
+                        <div>
+                            <span class="home on">Home</span>
+                            <span class="living">Living Room</span>
+                            <span class="bed">Bed Room</span>
+                            <span class="kitchen">Kitchen</span>
+                        </div>
+                    </div>
+                    <ul id="list"></ul>
                 </article>
             </div>
         </div>
     </section>
-    <aside class="popup">
-        <div class="wrap">
-            <img src="./img/gallery1.jpg">
-        </div>
-        <span class="close">close</span>
-    </aside>
     <aside id="go-top">
         <a href="#">
             <i class="fas fa-arrow-up"></i>
