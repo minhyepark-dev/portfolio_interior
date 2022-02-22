@@ -22,6 +22,11 @@
 </head>
 
 <body>
+    <div class="skip">
+        <ul>
+            <li><a href="#main">본문 바로가기</a></li>
+        </ul>
+    </div>
     <header id="header">
         <div class="inner">
             <h1><a href="index.html">CLOSETS</a></h1>
@@ -108,7 +113,7 @@
             </nav>
         </div>
     </header>
-    <section class="content join">
+    <section id="main" class="content join">
         <div class="inner">
             <div class="title-wrap">
                 <h2>Join</h2>
@@ -118,7 +123,7 @@
                 <fieldset>
                     <legend class="hidden">회원가입양식폼</legend>
                     <h3><label for="terms">Terms & Policy</label></h3>
-                    <textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptates iure enim repudiandae quidem. Optio, veritatis libero mollitia magni praesentium voluptates unde sapiente incidunt molestias aperiam, dolorem architecto magnam veniam qui, nobis explicabo maxime consectetur molestiae deleniti quas tenetur? Sed recusandae laborum illum magnam magni praesentium, hic quis? Quam itaque sequi rem, doloribus nobis inventore omnis facere in dolor perspiciatis! Quas consectetur aperiam omnis aliquid exercitationem sequi dolor animi velit ad sapiente, deserunt nemo, placeat dolorum molestias dignissimos eius molestiae ab assumenda dolorem alias labore provident. Repellendus dicta saepe ratione. Deleniti, quis ab omnis quasi ullam facere, ut eius ex fuga deserunt similique non eos voluptatem et repellat, sed sequi reprehenderit earum veritatis excepturi quia! Laboriosam consectetur ratione consequuntur fugit tempora, aliquid minima maxime illum expedita iste. Ratione, reiciendis suscipit rerum, explicabo ab placeat nisi asperiores voluptatum ullam sed praesentium aliquam! Quasi, molestiae exercitationem impedit reiciendis aliquam magnam asperiores eius deleniti facilis, laboriosam autem aut est cum, animi molestias deserunt voluptatibus delectus vitae ullam similique error. Maiores quo voluptatibus eius sit vitae quisquam natus neque a odit? Animi nemo sint nisi ullam unde itaque temporibus sed, quis, id quas tempora quam aliquam. Accusamus sunt nemo iure voluptatem officia iste cumque.
+                    <textarea name="terms" id="terms" cols="30" rows="10" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptates iure enim repudiandae quidem. Optio, veritatis libero mollitia magni praesentium voluptates unde sapiente incidunt molestias aperiam, dolorem architecto magnam veniam qui, nobis explicabo maxime consectetur molestiae deleniti quas tenetur? Sed recusandae laborum illum magnam magni praesentium, hic quis? Quam itaque sequi rem, doloribus nobis inventore omnis facere in dolor perspiciatis! Quas consectetur aperiam omnis aliquid exercitationem sequi dolor animi velit ad sapiente, deserunt nemo, placeat dolorum molestias dignissimos eius molestiae ab assumenda dolorem alias labore provident. Repellendus dicta saepe ratione. Deleniti, quis ab omnis quasi ullam facere, ut eius ex fuga deserunt similique non eos voluptatem et repellat, sed sequi reprehenderit earum veritatis excepturi quia! Laboriosam consectetur ratione consequuntur fugit tempora, aliquid minima maxime illum expedita iste. Ratione, reiciendis suscipit rerum, explicabo ab placeat nisi asperiores voluptatum ullam sed praesentium aliquam! Quasi, molestiae exercitationem impedit reiciendis aliquam magnam asperiores eius deleniti facilis, laboriosam autem aut est cum, animi molestias deserunt voluptatibus delectus vitae ullam similique error. Maiores quo voluptatibus eius sit vitae quisquam natus neque a odit? Animi nemo sint nisi ullam unde itaque temporibus sed, quis, id quas tempora quam aliquam. Accusamus sunt nemo iure voluptatem officia iste cumque.
                     </textarea>
                     <div class="agreement">
                         <input type="checkbox" name="agree" id="agree">
@@ -164,10 +169,10 @@
                         </tr>
                         <tr>
                             <th scope="row">GENDER</th>
-                            <td>
-                                <input type="radio" name="gender" id="male" value="male">
+                            <td role="radiogroup">
+                                <input type="radio" name="gender" id="male" value="male" tabindex="0" aria-checked="false">
                                 <label for="male">MALE</label>
-                                <input type="radio" name="gender" id="female" value="female">
+                                <input type="radio" name="gender" id="female" value="female" tabindex="-1" aria-checked="false">
                                 <label for="female">FEMALE</label>
                             </td>
                         </tr>
