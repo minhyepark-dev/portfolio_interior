@@ -1,8 +1,8 @@
 var container = document.getElementById("map");
 const t_on = document.querySelectorAll(".traffic li")[0];
 const t_off = document.querySelectorAll(".traffic li")[1];
-
 const branch_btns = document.querySelectorAll(".branch li");
+const mapOverlayWrap = document.querySelector(".map-overlay");
 const mapOverlay = document.querySelectorAll(".map-overlay > div");
 
 let drag = true;
@@ -13,8 +13,10 @@ var options = {
     level: 3,
 };
 
+// 카카오맵 지도 생성
 var map = new kakao.maps.Map(container, options);
 
+// 마커옵션
 var markerOptions = [
     {
         title: "Head Office",
@@ -45,12 +47,7 @@ var markerOptions = [
     },
 ];
 
-if (window.innerWidth < 768) {
-    mapOverlay.forEach((el) => {
-        el.classList.remove("on");
-    });
-}
-
+// 옵션의 갯수만큼 반복을 돌면서
 for (let i = 0; i < markerOptions.length; i++) {
     var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
@@ -59,6 +56,7 @@ for (let i = 0; i < markerOptions.length; i++) {
         image: new kakao.maps.MarkerImage(markerOptions[i].imgSrc, markerOptions[i].imgSize, markerOptions[i].imgPos),
     });
 
+    // 지도 탭 메뉴를 클릭시
     markerOptions[i].button.addEventListener("click", (e) => {
         e.preventDefault();
         for (let k = 0; k < markerOptions.length; k++) {
@@ -72,6 +70,7 @@ for (let i = 0; i < markerOptions.length; i++) {
         moveTo(markerOptions[i].latlng);
     });
 
+    // 지도 내의 마커를 클릭시
     kakao.maps.event.addListener(marker, "click", function () {
         for (let k = 0; k < markerOptions.length; k++) {
             markerOptions[k].overlay.classList.remove("on");
@@ -80,6 +79,7 @@ for (let i = 0; i < markerOptions.length; i++) {
     });
 }
 
+// 마커 정보 끄기 클릭시
 mapOverlay.forEach((el) => {
     const close = el.querySelector(".close");
     close.addEventListener("click", (e) => {
@@ -88,6 +88,7 @@ mapOverlay.forEach((el) => {
     });
 });
 
+// 교통정보상황 보기 클릭시
 t_on.addEventListener("click", (e) => {
     e.preventDefault();
     if (t_on.classList.contains("on")) return;
@@ -95,6 +96,8 @@ t_on.addEventListener("click", (e) => {
     t_on.classList.add("on");
     t_off.classList.remove("on");
 });
+
+// 교통정보상황 끄기 클릭시
 t_off.addEventListener("click", (e) => {
     e.preventDefault();
     map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
@@ -102,11 +105,13 @@ t_off.addEventListener("click", (e) => {
     t_on.classList.remove("on");
 });
 
+// 해당 좌표로 지도 이동
 function moveTo(target) {
     var moveLatLon = target;
     map.setCenter(moveLatLon);
 }
 
+// 브라우저가 리사이즈 될 때
 window.onresize = () => {
     let active_btn = document.querySelector(".branch li.on");
     let active_index = active_btn.getAttribute("data-index");
@@ -118,6 +123,7 @@ window.onresize = () => {
     }
 };
 
+// 로드맵과 위성맵 버튼 설정
 function setMapType(maptype) {
     var roadmapControl = document.getElementById("btnRoadmap");
     var skyviewControl = document.getElementById("btnSkyview");
@@ -132,11 +138,13 @@ function setMapType(maptype) {
     }
 }
 
+// 지도 드래그 설정
 setDraggable(drag);
 function setDraggable(draggable) {
     map.setDraggable(draggable);
 }
 
+// 지도 줌 설정
 setZoomable(zoom);
 function setZoomable(zoomable) {
     map.setZoomable(zoomable);
