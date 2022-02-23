@@ -116,51 +116,29 @@ function drawBorder(scrollPosition) {
     }
 }
 
+let countShow = true;
 // 카운터 함수 정의
 function counter(scrollPosition) {
     const counterTop = document.querySelector("#parallax").offsetTop - 500;
-    let countShow = true;
 
     if (scrollPosition > counterTop && countShow) {
-        let upto1 = 0;
-        let upto2 = 0;
-        let upto3 = 0;
-        let upto4 = 0;
-        let counts1 = setInterval(updated, 100);
-        let counts2 = setInterval(updated2, 100);
-        let counts3 = setInterval(updated3);
-        let counts4 = setInterval(updated4);
-
-        function updated() {
-            const counter1 = document.querySelector(".counter1");
-            counter1.innerHTML = ++upto1 + "k";
-            if (upto1 === 15) {
-                clearInterval(counts1);
-            }
-        }
-        function updated2() {
-            const counter2 = document.querySelector(".counter2");
-            counter2.innerHTML = ++upto2;
-            if (upto2 === 25) {
-                clearInterval(counts2);
-            }
-        }
-        function updated3() {
-            const counter3 = document.querySelector(".counter3");
-            counter3.innerHTML = ++upto3;
-            if (upto3 === 1234) {
-                clearInterval(counts3);
-            }
-        }
-        function updated4() {
-            const counter4 = document.querySelector(".counter4");
-            counter4.innerHTML = ++upto4;
-            if (upto4 === 369) {
-                clearInterval(counts4);
-            }
-        }
+        countingAction(0, 15, ".counter1", 100);
+        countingAction(0, 25, ".counter2", 100);
+        countingAction(0, 1234, ".counter3");
+        countingAction(0, 369, ".counter4");
         countShow = false;
     }
+}
+
+function countingAction(min, max, el, speed) {
+    const counter = document.querySelector(el);
+    const counts = setInterval(() => {
+        if (min < max) {
+            counter.innerHTML = ++min;
+        } else {
+            clearInterval(counts);
+        }
+    }, speed);
 }
 
 // 스크롤 할 때 실행
