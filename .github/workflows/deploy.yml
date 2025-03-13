@@ -33,20 +33,14 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload Artifact (optional if you don't want to use it)
+        uses: actions/upload-pages-artifact@v2
         with:
-          name: build-artifact
           path: dist # Vite의 기본 빌드 폴더
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
-
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
