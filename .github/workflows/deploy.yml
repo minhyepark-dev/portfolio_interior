@@ -31,10 +31,3 @@ jobs:
       # Vite 프로젝트 빌드
       - name: Build project
         run: npm run build
-
-      # 빌드된 파일을 GitHub Pages에 업로드
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Vite의 빌드 결과물이 저장되는 디렉토리
