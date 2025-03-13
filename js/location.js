@@ -1,4 +1,4 @@
-const kakaoMapKey = import.meta.env.VITE_KAKAO_APP_KEY;
+const kakaoMapKey = import.meta.env.VITE_KAKAO_MAP_API_KEY;
 
 // Kakao Maps API 동적 로드
 function loadKakaoMap() {
