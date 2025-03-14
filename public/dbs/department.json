@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "img": "/public/img/member1.jpg",
+      "name": "Deric Miller",
+      "position": "Creative Director"
+    },
+    {
+      "img": "/public/img/member2.jpg",
+      "name": "Chris kruse",
+      "position": "Technical Director"
+    },
+    {
+      "img": "/public/img/member3.jpg",
+      "name": "Devin Richards",
+      "position": "Project Managger"
+    },
+    {
+      "img": "/public/img/member4.jpg",
+      "name": "Matt Caleant",
+      "position": "Senior Engineer"
+    },
+    {
+      "img": "/public/img/member5.jpg",
+      "name": "John Gates",
+      "position": "Lead Creative"
+    },
+    {
+      "img": "/public/img/member6.jpg",
+      "name": "Amber Reed",
+      "position": "Visual Interaction Designer"
+    },
+    {
+      "img": "/public/img/member7.jpg",
+      "name": "Chula Carlson",
+      "position": "Accounting Assistant"
+    },
+    {
+      "img": "/public/img/member8.jpg",
+      "name": "Jamin Hegeman",
+      "position": "General Manager"
+    },
+    {
+      "img": "/public/img/member9.jpg",
+      "name": "Nelly Wollenberg",
+      "position": "Marketing Director"
+    }
+  ]
+}
