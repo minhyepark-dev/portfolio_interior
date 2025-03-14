@@ -34,4 +34,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
+          git config --global user.email "minhyepark.dev@gmail.com"
+          git config --global user.name "minhyepark"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           npm run deploy
