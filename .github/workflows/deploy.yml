@@ -21,6 +21,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Install gh-pages
+        run: npm install --save-dev gh-pages # gh-pages 설치 추가
+
       # 🔹 GitHub Secrets에서 API Key를 불러와 `.env` 파일 생성
       - name: Create .env file
         run: |
