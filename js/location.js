@@ -7,8 +7,6 @@ script.async = true;
 document.head.appendChild(script);
 
 script.onload = () => {
-  console.log(kakaoMapKey);
-
   var container = document.getElementById('map');
   const t_on = document.querySelectorAll('.traffic li')[0];
   const t_off = document.querySelectorAll('.traffic li')[1];
