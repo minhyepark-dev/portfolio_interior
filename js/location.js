@@ -1,18 +1,13 @@
 const kakaoMapKey = import.meta.env.VITE_KAKAO_MAP_API_KEY;
 
 // Kakao Maps API 동적 로드
-function loadKakaoMap() {
-  return new Promise((resolve) => {
-    const script = document.createElement('script');
-    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapKey}`;
-    script.async = true;
-    document.head.appendChild(script);
-    script.onload = () => resolve();
-  });
-}
+const script = document.createElement('script');
+script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapKey}`;
+script.async = true;
+document.head.appendChild(script);
 
-async function initMap() {
-  await loadKakaoMap();
+script.onload = () => {
+  console.log(kakaoMapKey);
 
   var container = document.getElementById('map');
   const t_on = document.querySelectorAll('.traffic li')[0];
@@ -183,5 +178,4 @@ async function initMap() {
       el.style.display = 'block';
     });
   });
-}
-initMap();
+};
