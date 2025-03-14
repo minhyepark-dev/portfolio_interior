@@ -237,7 +237,7 @@ function delayLoading() {
       e.currentTarget
         .closest('.item')
         .querySelector('.thumb')
-        .setAttribute('src', '../img/temp.jpg');
+        .setAttribute('src', '/img/temp.jpg');
     };
 
     let profile = el.closest('.item').querySelector('.profile');
