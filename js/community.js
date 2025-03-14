@@ -47,7 +47,7 @@ pageNumbers.forEach((number) => {
 // board json 데이터 불러오기
 function board() {
   const tabBoard = document.querySelector('#board tbody');
-  fetch('/public/dbs/community.json')
+  fetch('/dbs/community.json')
     .then((response) => response.json())
     .then((data) => {
       let items = data.board;
