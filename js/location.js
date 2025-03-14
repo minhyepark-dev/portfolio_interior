@@ -1,8 +1,8 @@
-const kakaoMapKey = import.meta.env.VITE_KAKAO_MAP_API_KEY;
-
 // Kakao Maps API 동적 로드
 const script = document.createElement('script');
-script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapKey}`;
+script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${
+  import.meta.env.VITE_KAKAO_MAP_API_KEY
+}&autoload=false`;
 script.async = true;
 document.head.appendChild(script);
 
