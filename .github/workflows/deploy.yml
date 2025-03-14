@@ -21,9 +21,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # 🔹 GitHub Secrets에서 API Key를 불러와 `.env` 파일 생성
+      - name: Create .env file
+        run: |
+          echo "VITE_KAKAO_MAP_API_KEY=${{ secrets.VITE_KAKAO_MAP_API_KEY }}" > .env
+
       - name: Build Project
-        env:
-          VITE_KAKAO_MAP_API_KEY: ${{ secrets.VITE_KAKAO_MAP_API_KEY }}
         run: npm run build
 
       - name: Deploy to GitHub Pages
