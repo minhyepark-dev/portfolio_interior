@@ -1,7 +1,7 @@
 const memberWrap = document.querySelector('.box-member');
 
 // 팀원목록 json 데이터 불러오기
-fetch('/dbs/department.json')
+fetch('dbs/department.json')
   .then((response) => response.json())
   .then((data) => {
     let items = data.data;

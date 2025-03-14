@@ -178,13 +178,13 @@ input[type='checkbox'] {
 input[type='checkbox'] + label {
   display: inline-block;
   padding-left: 25px;
-  background: url(../public/img/box_check_empty.png) no-repeat left/16px;
+  background: url(../img/box_check_empty.png) no-repeat left/16px;
   background-position: 0 0;
   line-height: 16px;
   cursor: pointer;
 }
 input[type='checkbox']:checked + label {
-  background-image: url('../public/img/box_check_checked.png');
+  background-image: url('../img/box_check_checked.png');
 }
 input[type='checkbox']:focus + label {
   border: 1px solid #7595a0;
@@ -203,13 +203,13 @@ input[type='radio'] {
 input[type='radio'] + label {
   display: inline-block;
   padding-left: 25px;
-  background: url(../public/img/box_radio_empty.png) no-repeat left/16px;
+  background: url(../img/box_radio_empty.png) no-repeat left/16px;
   background-position: 0 0;
   line-height: 16px;
   cursor: pointer;
 }
 input[type='radio']:checked + label {
-  background-image: url('../public/img/box_radio_checked.png');
+  background-image: url('../img/box_radio_checked.png');
 }
 input[type='radio']:focus + label {
   border: 1px solid #7595a0;
@@ -378,7 +378,7 @@ body.on::after {
   }
 }
 .join::before {
-  background: url(../public/img/visual_join.jpg) no-repeat fixed center/cover;
+  background: url(../img/visual_join.jpg) no-repeat fixed center/cover;
 }
 .join .inner fieldset > h3 {
   margin-bottom: 30px;
@@ -583,7 +583,7 @@ body.on::after {
   }
 }
 .department::before {
-  background: url(../public/img/visual_department.jpg) no-repeat fixed top -750px
+  background: url(../img/visual_department.jpg) no-repeat fixed top -750px
     center/cover;
 }
 .department .inner .box-vision {
@@ -859,7 +859,7 @@ body.on::after {
   }
 }
 .community::before {
-  background: url(../public/img/visual_community.jpg) no-repeat fixed bottom -310px
+  background: url(../img/visual_community.jpg) no-repeat fixed bottom -310px
     center/cover;
 }
 .community .inner #tab-table {
@@ -1151,7 +1151,7 @@ body.on::after {
   }
 }
 .youtube::before {
-  background: url(../public/img/visual_youtube.jpg) no-repeat fixed center/cover;
+  background: url(../img/visual_youtube.jpg) no-repeat fixed center/cover;
 }
 .youtube .inner .video-main {
   margin-bottom: 100px;
@@ -1437,7 +1437,7 @@ figure.pop .btnClose {
   }
 }
 .gallery::before {
-  background: url(../public/img/visual_gallery.jpg) fixed no-repeat top
+  background: url(../img/visual_gallery.jpg) fixed no-repeat top
     center/cover;
 }
 .gallery .inner #box-search {
@@ -1768,7 +1768,7 @@ aside.pop .close {
   }
 }
 .location::before {
-  background: url(../public/img/visual_location.jpg) no-repeat fixed
+  background: url(../img/visual_location.jpg) no-repeat fixed
     center/cover;
 }
 .location .inner:before,
@@ -2048,7 +2048,7 @@ aside.pop .close {
   }
 }
 .login::before {
-  background: url(../public/img/visual_login.jpg) no-repeat fixed center/cover;
+  background: url(../img/visual_login.jpg) no-repeat fixed center/cover;
 }
 .login .inner fieldset {
   width: 50%;
@@ -2531,13 +2531,13 @@ aside.pop .close {
   -webkit-transform: rotate(90deg);
 }
 #banner-slider .visual li[data-index='1'] {
-  background: url(../public/img/banner_slider1.jpg) no-repeat center/cover;
+  background: url(../img/banner_slider1.jpg) no-repeat center/cover;
 }
 #banner-slider .visual li[data-index='2'] {
-  background: url(../public/img/banner_slider2.jpg) no-repeat center/cover;
+  background: url(../img/banner_slider2.jpg) no-repeat center/cover;
 }
 #banner-slider .visual li[data-index='3'] {
-  background: url(../public/img/banner_slider3.jpg) no-repeat center/cover;
+  background: url(../img/banner_slider3.jpg) no-repeat center/cover;
 }
 #banner-slider .visual li.on {
   z-index: 3;
@@ -2771,7 +2771,7 @@ aside.pop .close {
   width: 100%;
   max-width: 50%;
   height: 750px;
-  background: url(../public/img/public/img_banner_left.jpg) no-repeat
+  background: url(../img/img_banner_left.jpg) no-repeat
     center/cover;
 }
 #list-intro .inner {
@@ -2907,7 +2907,7 @@ aside.pop .close {
   width: calc(100% / 3 - 20px);
   height: 300px;
   margin-right: 20px;
-  background: url(../public/img/magazine.jpg) no-repeat center/cover;
+  background: url(../img/magazine.jpg) no-repeat center/cover;
 }
 #box-magazine .inner .box-wrap > div.text-wrap .text {
   margin-bottom: 50px;
@@ -3315,7 +3315,7 @@ aside.pop .close {
   margin-bottom: 100px;
   padding-top: 100px;
   padding-bottom: 100px;
-  background: url(../public/img/light_parellax.jpg) no-repeat fixed center/cover;
+  background: url(../img/light_parellax.jpg) no-repeat fixed center/cover;
 }
 #parallax .inner .counters:before,
 #parallax .inner .counters:after {
@@ -3410,19 +3410,19 @@ aside.pop .close {
   transition: all 0.5s;
 }
 #clients .inner .list-logo li:nth-of-type(1) {
-  background: url(../public/img/logo1.png) no-repeat top center;
+  background: url(../img/logo1.png) no-repeat top center;
 }
 #clients .inner .list-logo li:nth-of-type(2) {
-  background: url(../public/img/logo2.png) no-repeat top center;
+  background: url(../img/logo2.png) no-repeat top center;
 }
 #clients .inner .list-logo li:nth-of-type(3) {
-  background: url(../public/img/logo3.png) no-repeat top center;
+  background: url(../img/logo3.png) no-repeat top center;
 }
 #clients .inner .list-logo li:nth-of-type(4) {
-  background: url(../public/img/logo4.png) no-repeat top center;
+  background: url(../img/logo4.png) no-repeat top center;
 }
 #clients .inner .list-logo li:nth-of-type(5) {
-  background: url(../public/img/logo5.png) no-repeat top center;
+  background: url(../img/logo5.png) no-repeat top center;
 }
 #clients .inner .list-logo li:hover {
   background-position: bottom center;
@@ -3450,7 +3450,7 @@ aside.pop .close {
   width: 100%;
 }
 #banner-bottom .visual:nth-of-type(1) {
-  background: url(../public/img/banner_bottom1.jpg) no-repeat top center/cover;
+  background: url(../img/banner_bottom1.jpg) no-repeat top center/cover;
 }
 #banner-bottom .visual:nth-of-type(1) .title h2,
 #banner-bottom .visual:nth-of-type(1) .title h3 {
@@ -3493,10 +3493,10 @@ aside.pop .close {
   -webkit-transform: rotate(90deg);
 }
 #banner-bottom .visual:nth-of-type(2) {
-  background: url(../public/img/banner_bottom2.jpg) no-repeat center/cover;
+  background: url(../img/banner_bottom2.jpg) no-repeat center/cover;
 }
 #banner-bottom .visual:nth-of-type(3) {
-  background: url(../public/img/banner_bottom3.jpg) no-repeat center/cover;
+  background: url(../img/banner_bottom3.jpg) no-repeat center/cover;
 }
 #banner-bottom .visual .title {
   margin-bottom: 30px;

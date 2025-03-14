@@ -47,7 +47,7 @@ pageNumbers.forEach((number) => {
 // board json 데이터 불러오기
 function board() {
   const tabBoard = document.querySelector('#board tbody');
-  fetch('/dbs/community.json')
+  fetch('dbs/community.json')
     .then((response) => response.json())
     .then((data) => {
       let items = data.board;
@@ -76,7 +76,7 @@ function board() {
 // ask json 데이터 불러오기
 function ask() {
   const tabAsk = document.querySelector('.ask');
-  fetch('/public/dbs/community.json')
+  fetch('dbs/community.json')
     .then((response) => response.json())
     .then((data) => {
       let items = data.ask;
@@ -115,7 +115,7 @@ function ask() {
 // faq json 데이터 불러오기
 function faq() {
   const tabFaq = document.querySelector('.faq tbody');
-  fetch('/public/dbs/community.json')
+  fetch('dbs/community.json')
     .then((response) => response.json())
     .then((data) => {
       let items = data.faq;

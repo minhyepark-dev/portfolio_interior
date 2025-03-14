@@ -10,7 +10,7 @@ const base = 'https://www.flickr.com/services/rest/?';
 const method1 = 'flickr.interestingness.getList';
 const method2 = 'flickr.photos.search';
 const method3 = 'flickr.galleries.getPhotos';
-const key = '39d6e86ec62077747de49698953a05a8';
+const key = '9e85f04dacb4a41b834ddd33463ef00e';
 const per_page = 30;
 const format = 'json';
 const livingRoom = '72157720386366321';
@@ -177,6 +177,7 @@ function callData(url) {
       return data.json();
     })
     .then((json) => {
+      console.log(json);
       let items = json.photos.photo;
 
       if (items.length > 0) {
@@ -236,7 +237,7 @@ function delayLoading() {
       e.currentTarget
         .closest('.item')
         .querySelector('.thumb')
-        .setAttribute('src', '../public/img/temp.jpg');
+        .setAttribute('src', '../img/temp.jpg');
     };
 
     let profile = el.closest('.item').querySelector('.profile');
