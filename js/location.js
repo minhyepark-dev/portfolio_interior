@@ -1,5 +1,5 @@
-// Kakao Maps API 동적 로드
 const script = document.createElement('script');
+// Kakao Maps API 동적 로드
 script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${
   import.meta.env.VITE_KAKAO_MAP_API_KEY
 }&autoload=false`;
@@ -7,6 +7,18 @@ script.async = true;
 document.head.appendChild(script);
 
 script.onload = () => {
+  const kakao = window.kakao;
+  // Kakao Maps API 초기화
+  kakao.maps.load(() => {
+    initMap(); // 지도 생성 함수 호출
+  });
+};
+
+script.onerror = () => {
+  console.error('Failed to load Kakao Maps API.');
+};
+
+function initMap() {
   var container = document.getElementById('map');
   const t_on = document.querySelectorAll('.traffic li')[0];
   const t_off = document.querySelectorAll('.traffic li')[1];
@@ -176,4 +188,4 @@ script.onload = () => {
       el.style.display = 'block';
     });
   });
-};
+}
